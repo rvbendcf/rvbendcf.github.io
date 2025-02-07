@@ -1,0 +1,60 @@
+/* Asegura que el contenedor y los elementos internos no tengan márgenes ni rellenos extra 
+.horizontal-accordion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los elementos 
+}
+
+/* Aplica el color de fondo solo a los íconos 
+.choice {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: lightblue;
+    border-radius: 15px;
+    overflow: hidden; /* Asegúrate de que el contenido no se desborde 
+}
+
+/* Oculta los textos 
+.unset {
+    max-width: 30px; /* Ancho máximo inicial 
+    height: auto;
+    transition: max-width 1s ease; /* Transición suave para el ancho 
+}
+
+.unset span {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0; /* Oculta el texto 
+    transition: opacity 1s ease; /* Transición suave para la opacidad 
+}
+
+/* Clase para expandir el tamaño 
+.expand {
+    max-width: 200px; /* Cambia a un ancho máximo deseado para expandir 
+    transition: max-width 1s ease; /* Transición suave para el ancho 
+}
+
+.expand span {
+    width: auto;
+    height: auto;
+    visibility: visible;
+    opacity: 1; /* Muestra el texto 
+    margin-right: 5px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas 
+    overflow: hidden; /* Oculta el texto que no cabe 
+    text-overflow: ellipsis; /* Muestra "..." si el texto es demasiado largo 
+}
+
+.choice svg {
+    width: 30px; 
+    height: 30px;
+    background-color: darkblue;
+    margin: 0;
+    padding: 5px;
+    border-radius: 50%; /* Opcional para bordes redondeados 
+    color: white; /* Hace que el ícono sea visible en el fondo oscuro 
+    flex-shrink: 0; /* Evita que el SVG se reduzca 
+}*/

@@ -1,7 +1,8 @@
 {
     "scripts": {
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "dev": "vite"
     },
     "dependencies": {
         "vite": "^6.1.0"
