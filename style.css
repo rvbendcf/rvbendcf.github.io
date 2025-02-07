@@ -22,16 +22,17 @@ body {
     display: flex;
     align-items: center;
     background-color: darkgray;
-    border-radius: 15px;
+    border-radius: 30px;
     overflow: hidden;
 }
 
 .icon {
-    width: 30px; 
-    height: 30px;
+    cursor: pointer;
+    width: 60px; 
+    height: 60px;
     background-color: gray;
     margin: 0;
-    padding: 5px;
+    padding: 10px;
     border-radius: 50%; /* Bordes redondeados */
     color: white; /* Hace que el ícono sea visible en el fondo oscuro */
     flex-shrink: 0; /* Evita que el SVG se reduzca */
@@ -41,17 +42,19 @@ body {
 }
 
 .choice span {
-    height: 30px;
+    height: 60px;
     width: auto;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-right: 10px;
-    margin-left: 5px;
+    margin-right: 20px;
+    margin-left: 10px;
     text-align: center;
-    line-height: 30px; /* Centra el texto verticalmente */
+    line-height: 60px; /* Centra el texto verticalmente */
     display: flex;
     align-items: center; /* Alinea el texto y el ícono verticalmente */
+    font-size: 30px;
+    cursor: default;
 }
 
 /* Estilo para el enlace y su ícono */
@@ -62,25 +65,22 @@ body {
 }
 
 .link svg {
-    width: 14px;
-    height: 14px;
+    width: 30px;
+    height: 30px;
     fill: currentColor; /* Hereda el color del texto */
+    margin-left: 10px;
 }
 
 /* Style of the unset classes */
 .unset {
-    max-width: 30px;
+    max-width: 60px;
     height: auto;
     transition: max-width 0.5s ease;
 }
 
 /* Style of the expand classes */
 .expand {
-    max-width: 300px;
+    max-width: 500px;
     max-height: auto;
     transition: max-width 0.75s ease;
-}
-
-.expand span {
-    opacity: 1;
 }
