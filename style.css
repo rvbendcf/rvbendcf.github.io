@@ -6,81 +6,113 @@
 body {
     background-color: var(--black);
     color: var(--white);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Style of the container with the accordion */
+h1, h2 {
+    text-align: center;
+}
+
 .horizontal-accordion {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en dispositivos pequeños */
+    padding: 10px;
 }
 
-/* Style of the elements inside the accordion */
 .choice {
-    margin: 0;
     display: flex;
     align-items: center;
     background-color: darkgray;
     border-radius: 30px;
     overflow: hidden;
+    transition: all 0.5s ease-in-out;
 }
 
 .icon {
     cursor: pointer;
-    width: 60px; 
+    width: 60px;
     height: 60px;
     background-color: gray;
-    margin: 0;
     padding: 10px;
-    border-radius: 50%; /* Bordes redondeados */
-    color: white; /* Hace que el ícono sea visible en el fondo oscuro */
-    flex-shrink: 0; /* Evita que el SVG se reduzca */
+    border-radius: 50%;
+    color: #FFBF00;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra el ícono dentro del círculo */
+    justify-content: center;
 }
 
 .choice span {
     height: 60px;
-    width: auto;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-right: 20px;
     margin-left: 10px;
     text-align: center;
-    line-height: 60px; /* Centra el texto verticalmente */
+    line-height: 60px;
     display: flex;
-    align-items: center; /* Alinea el texto y el ícono verticalmente */
-    font-size: 30px;
+    align-items: center;
+    font-size: 20px;
     cursor: default;
 }
 
-/* Estilo para el enlace y su ícono */
 .link {
-    display: inline-flex; /* Usa flexbox para alinear el ícono */
-    align-items: center; /* Centra verticalmente el ícono */
-    margin-left: 5px; /* Espacio entre el texto y el ícono */
+    display: inline-flex;
+    align-items: center;
+    margin-left: 5px;
+    color:#FFBF00;
 }
 
 .link svg {
-    width: 30px;
-    height: 30px;
-    fill: currentColor; /* Hereda el color del texto */
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
     margin-left: 10px;
 }
 
-/* Style of the unset classes */
 .unset {
     max-width: 60px;
-    height: auto;
     transition: max-width 0.5s ease;
 }
 
-/* Style of the expand classes */
 .expand {
     max-width: 500px;
-    max-height: auto;
     transition: max-width 0.75s ease;
 }
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .icon {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
+    .choice span {
+        height: 40px;
+    }
+    .unset {
+        max-width: 40px;
+    }
+}
+
+/*@media screen and (max-width: 480px) {
+    .choice {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+    .choice span {
+        font-size: 16px;
+        line-height: normal;
+        margin: 5px 0;
+    }
+}*/
